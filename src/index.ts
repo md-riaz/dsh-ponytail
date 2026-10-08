@@ -176,7 +176,7 @@ function registerCommands(deps: CommandDeps, commandCtx: Context): void {
         if (changed) {
           agent.inject(createUserMessage({
             content: [{ type: 'text', text: modeNotice(current) }],
-            source: { kind: 'plugin', plugin: name },
+            source: { kind: 'plugin:' + name, plugin: name },
           }))
         }
         return {
